@@ -15,15 +15,15 @@ $(document).ready(function () {
             albumHTML += '</li>';
             i += 1;
             console.log("done");
-        };
+        }
         albumHTML += '</ul>';
         $("#albums").html(albumHTML);
 
 
         var $overlay = $('<div id="overlay"></div>');
-        var $overlayHolder = $('<div class="Hold"></div>')
+        var $overlayHolder = $('<div class="Hold"></div>');
         var $image = $('<img>');
-        var $caption = $('<p class="captionInfo"></p>')
+        var $caption = $('<p class="captionInfo"></p>');
         var $artist = '<p class="captionInfo">Artist: Scooter</p>';
 
         $overlayHolder.append($image);
@@ -33,8 +33,6 @@ $(document).ready(function () {
 
         $('#albumGallery').on('click', 'a', function (e) {
             console.log("click");
-
-            var container = $(this).closest('li');
 
             var imageLocation = $(this).attr("href");
 
